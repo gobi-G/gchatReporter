@@ -13,9 +13,9 @@ description: |
     - Copy the URL listed next to your new webhook in the Webhook Url column.
   *Don't forget to enable this Step to **Always run** if
   you want to get notified about failed builds as well!*
-website: https://github.com/Equiem/bitrise-step-send-google-chat-message
-source_code_url: https://github.com/Equiem/bitrise-step-send-google-chat-message
-support_url: https://github.com/Equiem/bitrise-step-send-google-chat-message/issues
+website: https://github.com/gobi-G/gchatReporter
+source_code_url: https://github.com/gobi-G/gchatReporter
+support_url: https://github.com/gobi-G/gchatReporter/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
@@ -35,7 +35,7 @@ deps:
 
 toolkit:
   go:
-    package_name: github.com/Equiem/bitrise-step-send-google-chat-message
+    package_name: github.com/gobi-G/gchatReporter
 
 inputs:
   - is_debug_mode: 'no'
@@ -47,7 +47,7 @@ inputs:
       value_options:
         - 'yes'
         - 'no'
-  - webhook_url:
+  - webhook_url: ${WEBHOOK_URL}
     opts:
       title: 'Google Chat Webhook URL'
       is_required: true
