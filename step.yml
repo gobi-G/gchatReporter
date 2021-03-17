@@ -47,12 +47,12 @@ inputs:
       value_options:
         - 'yes'
         - 'no'
-  - webhook_url: ${WEBHOOK_URL}
+  - webhook_url:
     opts:
       title: 'Google Chat Webhook URL'
       is_required: true
       is_sensitive: true
-  - app_title: ${BITRISE_APP_TITLE}
+  - app_title:
     opts:
       title: 'App Title'
       is_required: true
@@ -80,10 +80,6 @@ inputs:
         **This option will be used if the build failed.** If you
         leave this option empty then the default one will be used.
       category: If Build Failed
-  - qr_image_url: $BITRISE_PUBLIC_INSTALL_PAGE_QR_CODE_IMAGE_URL
-    opts:
-      title: 'URL for a QR code which points to the install page.'
-      description: 'URL for a QR code which points to the install page.'
   - fields: |
       Branch|${BITRISE_GIT_BRANCH}
       Workflow|${BITRISE_TRIGGERED_WORKFLOW_ID}
